@@ -6,6 +6,19 @@ This repo provides a sample pdf generator that:
  * Outputs base-64 encoded pdf file data for display in iframe on screen
  * Saves pdf to a local file using cordova File plugin
 
+## View it now
+https://jeffleus.github.io/ionic-pdf/www/#/
+
+## Run locally
+
+This assumes you already have an emulator setup for iOS or Android. Substitute `android` for `ios` below to use Android. (skip the ionic/cordova install if you are already setup to develop in ionic
+
+    npm install -g ionic cordova
+    git clone https://github.com/jeffleus/ionic-pdf.git
+    cd ionic-pdf
+    ionic platform add ios
+    ionic emulate ios
+
 ## pdfMake.org
 The [pdfMake.org](http://pdfMake.org) library is based on the pdfKit library and provides a declarative approach to document definition that provides a number of features: columns, tables, images, limited formatting, etc.  The one piece that was missing for my specific use was generic SVG drawings.  So, I made a small edit to allow me to draw a piechart using SVG path commands.  NOTE - the pdfmake.min.js library used in this example contains my edits.
 ## inline pdf display
