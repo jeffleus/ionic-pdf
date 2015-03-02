@@ -3,14 +3,13 @@
 This repo provides a sample pdf generator that:
 
  * Uses the pdfMake.org library for generating the pdf
- * Outputs base-64 encoded pdf file data for display in iframe on screen
- * Saves pdf to a local file using cordova File plugin
+ * Outputs base-64 pdf dataURI for display in iframe (*if run in browser*)
+ * Saves pdf to a local file using cordova File plugin (*if run on device/emulator*)
 
 ## View it now
 https://jeffleus.github.io/ionic-pdf/www/#/
 
 ## Run locally
-
 This assumes you already have an emulator setup for iOS or Android. Substitute `android` for `ios` below to use Android. (*skip the ionic/cordova install if you are already setup to develop in ionic*)
 
     sudo npm install -g ionic cordova
@@ -33,17 +32,10 @@ To sample the file save method, you will need to run the app in the emulator or 
   * org.apache.cordova.inappbrowser  (**prodvided in ionic starter by default**)
 
 
-ReportBuilderSvc
-
-```javascript
-(function() {
-    'use strict';
-    // attach the factories and service to the [starter.services] module in angular
-    angular.module('starter.services')
-        .service('ReportBuilderSvc', reportBuilderService);
-    
-	function reportBuilderService() {
-    ...
-    }
-})();
-```
+##ToDo List
+  * build out a wiki on repo to document the setup a little more
+    * ReportBuilderSvc
+    * ReportSvc
+    * MainCtrl
+  * add an email attachment example to the demo
+  * refactor the reportSvc to receive docDef instead of ReportBuilderSvc
