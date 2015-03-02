@@ -2,10 +2,12 @@
 // Report Service
 //
 // This service provides a dummy document definition for the purpose of this sample.  In 
-// my real world usage, I split documentDef creation from the report creation.  The RptBuilderSvc
+// my real world usage, I split documentDef creation from the reportPDF creation.  The RptBuilderSvc
 // is used to receive inputs and return a JSON object w/ the report declarations.  This mock svc
 // just creates some random progress matrix and draws a table to display.  The pdfMake.org site
-// has a nice playground for drafting your report pieces.
+// has a nice playground for drafting your report pieces.  My plan is to share the ionic-pdf
+// so users can incorporate PDF generation and focus on creating their docDefs and using ionic-pdf
+// to easily render
 (function() {
     'use strict';
     // attach the factories and service to the [starter.services] module in angular
@@ -26,6 +28,7 @@
                 (Math.random() * 100).toFixed(1),
                 (Math.random() * 100).toFixed(1)];
             //use this array for each row bar, and return the document declaration object
+            // plz see the pdfMake.org site for examples of document definitions
 			return { content: [
                 { text: 'Categorical CoreCheck Analysis',
                     style: 'subheader',

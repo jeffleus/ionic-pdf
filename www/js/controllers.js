@@ -7,14 +7,14 @@ angular.module('starter.controllers', [])
     console.log('main controller');
     $scope.runReport = _runReport;
     $scope.clearReport = _clearReport;
-//	$scope.saveReport = _saveReport;
     _activate();
     
     function _activate() {        
 //
 // ReportSvc Event Listeners: Progress/Done
-//    used to listen for async progress updates so loading text can change in UI to be repsonsive
-//    because the report process can be 'lengthy' on older devices
+//    used to listen for async progress updates so loading text can change in 
+//    UI to be repsonsive because the report process can be 'lengthy' on 
+//    older devices (chk reportSvc for emitting events)
 //
 		$scope.$on('ReportSvc::Progress', function(event, msg) {
 			_showLoading(msg);

@@ -85,6 +85,8 @@
             // currently mocking this and returning a pre-built JSON doc definition
             
 			//use rpt service to generate the JSON data model for processing PDF
+            // had to use the $timeout to put a short delay that was needed to 
+            // properly generate the doc declaration
             $timeout(function() {
                 var dd = {};
                 dd = ReportBuilderSvc.generateReport()

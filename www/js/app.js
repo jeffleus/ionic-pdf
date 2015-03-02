@@ -16,6 +16,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.services', 'starter.co
       StatusBar.styleDefault();
     }
     if (window.cordova) {
+        //quick check for presence of ngCordovaFile plugin
         console.log('starting cordovaFile check');
         console.log($cordovaFile);
         //check for the docs directory suing File plugin
